@@ -1,46 +1,30 @@
 const brand = {
-  deepBlue: '#0C1F4A',
-  blue: '#2E4C9A',
-  cream: '#F7F4EE',
+  blush: '#FFD8E3',
+  cream: '#FFF7F1',
+  cocoa: '#6D3E2E',
+  gold: '#D9A441',
 };
 
 export default function Contact() {
   return (
-    <div style={{ backgroundColor: brand.cream }}>
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-semibold" style={{ color: brand.deepBlue }}>Contact</h1>
-          <p className="mt-2 text-slate-600">We’re here to help with applications and viewings.</p>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <h2 className="text-3xl md:text-4xl font-semibold" style={{ color: brand.cocoa }}>Get in Touch</h2>
+      <p className="mt-2 text-[15px]" style={{ color: '#5a2f22' }}>We\'d love to bake for you. Reach out to plan something beautiful.</p>
 
-          <div className="mt-8 grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-2xl border border-slate-200">
-              <h2 className="text-xl font-medium text-slate-900">WhatsApp</h2>
-              <p className="mt-2 text-slate-600">Chat with our team for quick support.</p>
-              <a
-                href="https://wa.me/254700000000"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block mt-4 px-4 py-2 rounded-lg text-white"
-                style={{ backgroundColor: brand.blue }}
-              >
-                Message on WhatsApp
-              </a>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl border border-slate-200">
-              <h2 className="text-xl font-medium text-slate-900">Directions & Office Hours</h2>
-              <p className="mt-2 text-slate-600">Mon–Sat: 9:00am–5:30pm</p>
-              <div className="mt-4 aspect-video rounded-lg overflow-hidden">
-                <iframe
-                  title="Directions Map"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=36.80%2C-1.29%2C36.84%2C-1.25&layer=mapnik"
-                  className="w-full h-full border-0"
-                />
-              </div>
-            </div>
-          </div>
+      <div className="mt-8 grid md:grid-cols-2 gap-8">
+        <div className="rounded-3xl p-6 bg-white border" style={{ borderColor: brand.blush }}>
+          <h3 className="text-lg font-semibold" style={{ color: brand.cocoa }}>Say hello</h3>
+          <ul className="mt-3 text-sm space-y-2" style={{ color: '#5a2f22' }}>
+            <li>WhatsApp: <a href="https://wa.me/254700000000" className="underline">+254 700 000 000</a></li>
+            <li>Email: hello@butterbloom.co.ke</li>
+            <li>Hours: Mon–Sat 9:00–17:30</li>
+            <li>Location: Nairobi, Kenya</li>
+          </ul>
         </div>
-      </section>
+        <div className="rounded-3xl overflow-hidden border" style={{ borderColor: brand.blush }}>
+          <iframe title="Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.874558919221!2d36.821946!3d-1.292066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d4d99b2e39%3A0x2c9b0a!2sNairobi%20CBD!5e0!3m2!1sen!2ske!4v1700000000000" width="100%" height="320" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
     </div>
   );
 }
